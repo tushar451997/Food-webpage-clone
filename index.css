@@ -9,12 +9,17 @@
 }
 
 /* --------Navbar css------------ */
+.openmenu{
+    display: none;
+}
+
 
 nav{
     width: 100%;
     background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     padding: 20px 40px;
     font-size: 20px;
@@ -84,6 +89,10 @@ button:hover{
     font-size: 25px;
     margin-bottom: 10px;
 }
+/* .about p{
+    height: 110px;
+    overflow-y: hidden;
+} */
 
 /* -----My Recipie Section */
 
@@ -146,7 +155,7 @@ button:hover{
    padding: 30px 0;
 }
 .all-foods{
-    width: 90%;
+    width: 95%;
     margin: auto;
     padding: 20px;
     display: grid;
@@ -161,7 +170,7 @@ button:hover{
 }
 .single-product img{
 width: 100%;
-height: 30Vh;
+height: 30vh;
 border-radius: 10px;
 }
 .single-product button{
@@ -187,25 +196,225 @@ border-radius: 10px;
         padding: 0 2% 0 7%;
         margin-bottom: 0;
     }
+    .home div:last-child{
+        width: 50%;
+     }
+     .home img{
+        width: 100%;
+     }
+     .all-foods{
+        grid-template-columns: repeat(3,1fr);
+     }
 }
 
 @media screen and (max-width:768px) {
    .home{
     padding: 0 2% 0 2%;
-    border: 1px solid black;
    }
-    .home img{
-       width: 100%;
-    }
+    
     .home div:last-child{
-        width: 80%;
-        border: 1px solid black;
+        width: 40%;
     }
     .about img{
-        width: 80%;
+        width: 100%;
     }
     .home div p:last-child{
         height: 60px;
         overflow-y: hidden;
     }
+    .about{
+        width: 100%;
+    }
+    
+    .about div:first-child{
+        width: 45%;
+        height: 30%;
+    }
+    .about div:last-child{
+        width: 55%;
+        padding-left: 40px;
+    }
+    .about{
+        justify-content: center;
+       }
+       .about div:first-child {
+        margin-bottom: -30px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+       }
+     .food-type-container{
+        width: 100%;
+        gap: 20px;
+     }
+      .food-type{
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+      }
+      .food-type p{
+          font-size: 14px;
+          height: 50px;
+          overflow-y: hidden;
+      }
+      .social-media{
+        width: 95%;            
+      }
+      .social-media div p:last-child{
+        font-size: 15px;
+      }
+      .all-foods{
+        grid-template-columns: repeat(2,1fr);
+     }
 }
+
+@media screen and (max-width:570px) {
+    .home div:first-child  p:first-child{
+     font-size: 20px;
+    }
+    .home div:first-child  p{
+        font-size: 12px;
+       }
+
+     
+       .about div:last-child  p{
+        font-size: 12px;
+       }
+    .about div:first-child img{
+        width: 100%;
+        height: 90%;
+    }
+    .about{
+        justify-content: center;
+       }
+       .about div:first-child {
+        margin-bottom: -30px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+       }
+       .food-type-container{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .food-type{
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      .food-type p{
+          font-size: 14px;
+          height: 50px;
+          overflow-y: hidden;
+      }
+
+   
+   .closenav{
+    display: none;
+   }
+   .openmenu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 0 30px;
+    position: fixed;
+}
+.openmenu .threeline div{
+    width: 30px;
+    border: 1px solid black;
+     }
+     .openmenu .threeline{
+       display: grid;
+       gap: 5px;
+       cursor: pointer;
+       width: auto;
+       z-index: 1;
+       color: black;
+       top: 20px;
+       left: 20px;
+       padding: 30px;
+     }
+    .openmenu span{
+       width: 0;
+       height: 0;
+       overflow: hidden;
+     }
+     .openmenu .threeline:hover span{
+      display: grid;
+      width: 50%;
+      height: auto;
+      gap: 30px;
+      background-color: aqua; 
+      position: fixed;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      padding: 80px 50px 20px 100px;
+      transition: 0.5s ease-in-out;
+   }
+   .openmenu a:hover{
+    color: tomato;
+   }
+.threeline:hover{
+    background-color: aqua;
+}
+
+
+
+   }
+ @media screen and (max-width:461px) {
+    .home{
+        display: grid;
+    }
+    .home div:last-child {
+        margin: auto;
+        width: 100%;
+    }
+    .home img {
+        width: 100%;
+    }
+    .home div:first-child  p:first-child{
+     font-size: 25px;
+    }
+    .home div:first-child  p{
+        font-size: 15px;
+       }
+       .about{
+        justify-content: center;
+       }
+       .about div:first-child {
+        margin-bottom: -30px;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+       }
+    .all-foods{
+        grid-template-columns: repeat(1,1fr);
+     }
+    
+ }
+ @media screen and (max-width:400px) {
+   
+       .food-type-container{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .food-type{
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      .food-type p{
+          font-size: 14px;
+          height: 50px;
+          overflow-y: hidden;
+      }
+      .social-media div p:first-child,:last-child{
+        font-size: 15px;
+      }
+      .social-media{
+        padding: 0;
+      }
+ }

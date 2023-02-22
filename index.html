@@ -6,22 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food app</title>
     <link rel="shortcut icon" href="https://images.pexels.com/photos/3184195/pexels-photo-3184195.jpeg?auto=compress&cs=tinysrgb&w=600" type="image/x-icon">
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
+<style>
+  .sidebar .openmenu  .threeline{
+        display: grid;
+        gap: 7px;
+        cursor: pointer;
+        padding: 2px;
+        position: fixed;
+        padding: 20px;
+        z-index: 1;
+    }
+   .sidebar .openmenu .threeline div{
+        height: 1px;
+        width: 30px;
+        border: 1px solid black;
+    }
+   .threeline:hover .openmenu .allsidenav  {
+    background-color: red;
+   }
+  
+</style>
 <body>
- 
-        <nav>
+    <div class="openmenu">
+        <div class="threeline">
+            <div></div>
+            <div></div>
+            <div></div>
+            <span class="allsidenav">
+             <a href="#home">Home</a>
+             <a href="#about">About Me</a>
+             <a href="#myrecipie">Recipies</a>
+             <a href="#all-foods">Foods</a>
+         </span>               
+        </div>
+        <div>
+            <a href="">Food <span>Network</span></a>
+        </div>
+   </div>
+        <nav class="closenav">
             <div>
                 <a href="">Food <span>Network</span></a>
             </div>
-            <div>
+            <div class="navtext">
                 <a href="#home">Home</a>
                 <a href="#about">About Me</a>
                 <a href="#myrecipie">Recipies</a>
                 <a href="#all-foods">Foods</a>
             </div>
+            
         </nav>
   
+
 
     <div class="home" id="home">
         <div>
@@ -90,9 +127,9 @@
             <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
             <h3>Lunch</h3>
              <p>
-                a meal eaten in the middle of <br>
-                the day, typically one that is <br> 
-                lighter or less formal than an <br>
+                a meal eaten in the middle of 
+                the <br> day, typically one that is 
+                lighter <br> or less formal than an
                  evening meal.
              </p>
           </div>
